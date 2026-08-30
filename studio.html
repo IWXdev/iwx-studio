@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio — IWX Studio</title>
+  <meta name="description" content="Meet IWX Studio — an independent game development studio founded and led by one developer." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Studio — IWX Studio" />
+  <meta property="og:description" content="Meet IWX Studio — an independent game development studio founded and led by one developer." />
+  <meta property="og:image" content="assets/iwx_icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/png" href="assets/iwx_icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="IWX Studio — Home">
+        <img src="assets/iwx_icon.png" alt="IWX Studio" class="brand__icon" />
+        <span>IWX Studio</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="games.html" class="nav-link">Games</a>
+        <a href="studio.html" class="nav-link is-active">Studio</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div class="nav-links__socials"><a href="https://iwx-10.itch.io/" target="_blank" rel="noopener noreferrer" class="social-icon social-icon--labeled"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="10" rx="4"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="16" cy="10" r="1"/><circle cx="18" cy="13" r="1"/></svg><span>itch.io</span></a><a href="https://github.com/IWXdev" target="_blank" rel="noopener noreferrer" class="social-icon social-icon--labeled"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg><span>GitHub</span></a><a href="https://www.reddit.com/user/IWX_10/" target="_blank" rel="noopener noreferrer" class="social-icon social-icon--labeled"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="12" r="4"/><circle cx="16" cy="9" r="3"/><path d="M12.5 14.5c1 1 3 1 4 0"/></svg><span>Reddit</span></a><a href="https://discord.gg/ThWcgst4D" target="_blank" rel="noopener noreferrer" class="social-icon social-icon--labeled"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg><span>Discord</span></a></div>
+      </nav>
+
+      <div class="header-right">
+        <div class="social-icons"><a href="https://iwx-10.itch.io/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="itch.io" title="itch.io"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="10" rx="4"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="16" cy="10" r="1"/><circle cx="18" cy="13" r="1"/></svg></a><a href="https://github.com/IWXdev" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></a><a href="https://www.reddit.com/user/IWX_10/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Reddit" title="Reddit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="12" r="4"/><circle cx="16" cy="9" r="3"/><path d="M12.5 14.5c1 1 3 1 4 0"/></svg></a><a href="https://discord.gg/ThWcgst4D" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Discord" title="Discord"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a></div>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <h1>This Is IWX Studio</h1>
+        <p class="lead">
+          A small, independent studio with a simple rule: every game has to feel
+          like something. No filler worlds, no safe ideas.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              <strong>IWX Studio:</strong> An independent studio producing and developing games that break the mold
+               the studio is currently growing.
+            </p>
+            <p>
+              A few years later, a wide variety of games were released
+              for various platforms
+              you can find them in the section <a href="games.html" class="nav-link"><strong>Games</strong></a>
+            </p>
+            <p>
+              Currently, all games are designed to stand on their own,
+               without needing the studio's logo to explain why they are worth your time.
+            </p>
+          </div>
+
+          <div class="founder-card">
+            <div class="founder-card__avatar">
+              <img src="assets/founder.png" alt="iwx — Founder & Lead Developer" />
+            </div>
+            <h3>iwx</h3>
+            <p class="founder-card__role">Founder &amp; Lead Developer</p>
+            <p class="founder-card__bio">
+              Handles design, programming, and production end-to-end — from first
+              prototype to shipped build, across every game in the lineup.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-item__year">2024</span>
+            <div class="timeline-item__rail">
+              <span class="timeline-item__dot"></span>
+              <span class="timeline-item__line"></span>
+            </div>
+            <div class="timeline-item__content">
+              <div class="timeline-item__title">IWX Studio is founded</div>
+              <p class="timeline-item__desc">Started as a one-person experiment: finish small, finish often.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-item__year">2025</span>
+            <div class="timeline-item__rail">
+              <span class="timeline-item__dot"></span>
+              <span class="timeline-item__line"></span>
+            </div>
+            <div class="timeline-item__content">
+              <div class="timeline-item__title">Echoes Of Frost released</div>
+              <p class="timeline-item__desc">Our first full release — a brutal 2D brawler about revenge in a frozen world.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-item__year">2026</span>
+            <div class="timeline-item__rail">
+              <span class="timeline-item__dot"></span>
+              <span class="timeline-item__line"></span>
+            </div>
+            <div class="timeline-item__content">
+              <div class="timeline-item__title">Falling Core ships, In The Air begins</div>
+              <p class="timeline-item__desc">A fast arcade side-project shipped alongside early work on our most ambitious world yet.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-item__year">Next</span>
+            <div class="timeline-item__rail">
+              <span class="timeline-item__dot"></span>
+            </div>
+            <div class="timeline-item__content">
+              <div class="timeline-item__title">Whatever's worth building next</div>
+              <p class="timeline-item__desc">We are currently working
+                 on our biggest project yet—a game <a href="games/in-the-air.html" class="nav-link"><strong>IN THE AIR</strong></a> Stay tuned
+                  the release date is fast approaching.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mission-panel">
+          <h3>What we care about</h3>
+          <p>
+            Creating games with a distinct identity—in terms of narrative, design,
+             and even programming—leaves a lasting impact.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-cta">
+        <div>
+          <h3>Stay in the loop</h3>
+          <p>Devlogs, demo drops, and behind-the-scenes — posted first in the Discord.</p>
+        </div>
+        <a href="https://discord.gg/ThWcgst4D" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          Join the Discord
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom__brand">
+          <img src="assets/iwx_icon.png" alt="IWX Studio" class="brand__icon brand__icon--sm" />
+          <span>IWX Studio</span>
+        </div>
+        <div class="social-icons"><a href="https://iwx-10.itch.io/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="itch.io" title="itch.io"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="10" rx="4"/><line x1="6" y1="12" x2="10" y2="12"/><line x1="8" y1="10" x2="8" y2="14"/><circle cx="16" cy="10" r="1"/><circle cx="18" cy="13" r="1"/></svg></a><a href="https://github.com/IWXdev" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></a><a href="https://www.reddit.com/user/IWX_10/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Reddit" title="Reddit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="12" r="4"/><circle cx="16" cy="9" r="3"/><path d="M12.5 14.5c1 1 3 1 4 0"/></svg></a><a href="https://discord.gg/ThWcgst4D" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Discord" title="Discord"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></a></div>
+        <div class="footer-links">
+          <a href="press-kit.html">Press Kit</a>
+          <span class="dot">•</span>
+          <span class="mono" id="status-clock"></span>
+        </div>
+      </div>
+      <p class="footer-copyright">© 2026 IWX Studio. All games and assets belong to their respective owners.</p>
+    </div>
+  </footer>
+
+  <script src="js/background.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>
