@@ -1,7 +1,3 @@
-// ============================================
-//  game-page.js — renders a full game detail page
-//  from PROJECTS, matched by the page's data-project-id (slug).
-// ============================================
 
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("game-detail");
@@ -16,8 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.title = `${p.title} — IWX Studio`;
 
-  // PLATFORM_ICONS is now shared — see js/platform-icons.js
-
   const platformBadges = p.platforms
     .map(
       (pl) =>
@@ -25,9 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
     )
     .join("");
 
-  // Prefer the gameplay video for the hero banner, but fall back to the
-  // static thumbnail when there's no video yet, the user prefers reduced
-  // motion, or their browser is in data-saver mode.
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const saveData = navigator.connection && navigator.connection.saveData;
   const useVideo = Boolean(p.youtubeId) && !prefersReducedMotion && !saveData;

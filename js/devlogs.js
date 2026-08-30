@@ -1,8 +1,3 @@
-// ============================================
-//  Devlog entries — latest updates feed
-//  To add a new entry: append a new object to DEVLOGS below
-//  Newest entry should be FIRST in the array (top of the feed)
-// ============================================
 
 const DEVLOGS = [
   {

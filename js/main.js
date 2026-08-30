@@ -1,15 +1,8 @@
-// ============================================
-//  main.js — Home & Games listing pages
-// ============================================
-
 document.addEventListener("DOMContentLoaded", () => {
   renderGamesGrid();
   renderDevlogs();
   initVideoPreviews();
 });
-
-/* ---------- شارات المنصات (Platform badges) ---------- */
-/* PLATFORM_ICONS is now shared — see js/platform-icons.js */
 
 function renderPlatformBadges(platforms) {
   return `<div class="platform-badges">${platforms
@@ -20,7 +13,6 @@ function renderPlatformBadges(platforms) {
     .join("")}</div>`;
 }
 
-/* ---------- بناء بطاقات المشاريع (Home + Games) ---------- */
 function renderGamesGrid() {
   const grid = document.getElementById("games-grid");
   if (!grid) return;
@@ -51,7 +43,6 @@ function renderGamesGrid() {
   `).join("");
 }
 
-/* ---------- feed التحديثات (Devlog) — homepage only ---------- */
 function renderDevlogs() {
   const feed = document.getElementById("devlog-feed");
   if (!feed || typeof DEVLOGS === "undefined") return;
@@ -79,21 +70,17 @@ function renderDevlogs() {
   `).join("") + `<div class="log-cursor"><span class="mono">&gt;</span><span class="log-cursor__blink"></span></div>`;
 }
 
-/* ---------- Hover video preview على بطاقات الألعاب ---------- */
-/* يشتغل غير بالماوس (desktop). على الموبايل ماكاينش hover حقيقي،
-   فالبطاقة كتبقى صورة ثابتة والضغط عليها كيوديك لصفحة اللعبة مباشرة. */
 function initVideoPreviews() {
   const thumbs = document.querySelectorAll(".proj-card__thumb[data-youtube-id]");
 
   thumbs.forEach((thumb) => {
     const videoId = thumb.dataset.youtubeId;
-    if (!videoId) return; // no video yet for this game — stays a static thumbnail
+    if (!videoId) return;
 
     let iframe = null;
     let hoverTimer = null;
 
     thumb.addEventListener("mouseenter", () => {
-      // small delay so quick mouse-overs while scrolling don't trigger a load
       hoverTimer = setTimeout(() => {
         if (iframe) return;
         iframe = document.createElement("iframe");
@@ -110,7 +97,7 @@ function initVideoPreviews() {
     thumb.addEventListener("mouseleave", () => {
       clearTimeout(hoverTimer);
       if (iframe) {
-        iframe.remove(); // destroying the iframe stops playback
+        iframe.remove();
         iframe = null;
       }
     });

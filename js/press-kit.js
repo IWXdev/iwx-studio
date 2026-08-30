@@ -1,7 +1,3 @@
-// ============================================
-//  press-kit.js
-// ============================================
-
 document.addEventListener("DOMContentLoaded", () => {
   renderPressGamesTable();
   setupCopyBoilerplate();

@@ -1,9 +1,3 @@
-// ============================================
-//  gallery.js — reusable screenshot lightbox
-//  Call initGallery(images) after the .gallery-thumb elements
-//  exist in the DOM. `images` is the array of full-size URLs
-//  in display order (same order as the thumbnails).
-// ============================================
 
 function initGallery(images) {
   const overlay = document.getElementById("lightbox-overlay");

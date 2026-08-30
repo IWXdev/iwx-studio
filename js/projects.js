@@ -1,17 +1,3 @@
-// ============================================
-//  Project data
-//  To add a new game: append a new object to PROJECTS below
-//  status: "released" | "in-dev" | "prototype"
-//  platforms: any of "windows" | "linux" | "mac" | "web" | "android"
-//
-//  youtubeId: the video ID from the game's YouTube URL.
-//  e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ  ->  "dQw4w9WgXcQ"
-//  Used for: (1) the game page's background video hero,
-//            (2) the hover-preview on game cards (Home + Games list).
-//  Set to null if no video is available yet — the site falls back
-//  to the static thumbnail automatically.
-// ============================================
-
 const PROJECTS = [
   {
     id: "proj-01",

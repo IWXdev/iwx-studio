@@ -1,15 +1,9 @@
-// ============================================
-//  site.js — shared across every page
-//  (clock, scroll-spy nav highlighting, mobile menu)
-// ============================================
-
 document.addEventListener("DOMContentLoaded", () => {
   setupClock();
   setupNav();
   setupMobileNav();
 });
 
-/* ---------- ساعة صغيرة فالـ status bar ---------- */
 function setupClock() {
   const clockEl = document.getElementById("status-clock");
   if (!clockEl) return;
@@ -24,7 +18,6 @@ function setupClock() {
   setInterval(update, 30000);
 }
 
-/* ---------- تمييز رابط التنقل الحالي عند التمرير (homepage only) ---------- */
 function setupNav() {
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -49,7 +42,6 @@ function setupNav() {
   sections.forEach((s) => observer.observe(s));
 }
 
-/* ---------- قائمة الموبايل ---------- */
 function setupMobileNav() {
   const toggle = document.getElementById("nav-toggle");
   const links = document.getElementById("nav-links");

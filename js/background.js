@@ -1,9 +1,3 @@
-// ============================================
-//  background.js — interactive node-graph background
-//  Inspired by Godot's Scene Tree: nodes connected by
-//  signal-like lines, reacting to the mouse.
-//  Respects prefers-reduced-motion (renders one static frame).
-// ============================================
 
 (function () {
   const canvas = document.getElementById("bg-canvas");
@@ -44,7 +38,6 @@
   }
 
   function initParticles() {
-    // Density scales with screen area, capped for performance.
     const area = width * height;
     const count = Math.min(80, Math.max(24, Math.floor(area / 20000)));
     particles = Array.from({ length: count }, () => ({
@@ -68,7 +61,6 @@
       });
     }
 
-    // Node-to-node connections
     ctx.lineWidth = 1;
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
@@ -88,7 +80,6 @@
       }
     }
 
-    // Mouse acts as a temporary "node" — connects to nearby nodes
     if (mouse.active) {
       particles.forEach((p) => {
         const dx = p.x - mouse.x;
@@ -137,7 +128,6 @@
     mouse.active = false;
   });
 
-  // Touch: treat first touch point like a mouse position
   window.addEventListener(
     "touchmove",
     (e) => {
@@ -155,7 +145,7 @@
   resize();
 
   if (prefersReducedMotion) {
-    drawFrame(); // one static frame, no animation loop
+    drawFrame();
   } else {
     loop();
   }
