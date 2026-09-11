@@ -1,6 +1,13 @@
 
 const DEVLOGS = [
   {
+    date: "2026-09-11",
+    project: "Falling Core",
+    entry:
+      "The first version has been released on the Google Store and is currently available",
+    link: "https://play.google.com/store/apps/details?id=com.iwx.fallingcore"
+  },
+  {
     date: "2026-08-09",
     project: "Falling Core",
     entry:
