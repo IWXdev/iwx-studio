@@ -73,7 +73,7 @@ const PROJECTS = [
       "In this fast-paced, thrilling game, you control a glowing energy core plummeting from the sky at breakneck speed. Your mission is simple but demanding: dodge deadly obstacles and survive as long as possible.",
     tags: ["Arcade", "Endless", "Reflex"],
     links: {
-      play: null,
+      play: "https://play.google.com/store/apps/details?id=com.iwx.fallingcore",
       source: null
     }
   }
